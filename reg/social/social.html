@@ -1,0 +1,40 @@
+<form name="regSocialForm" novalidate step-form="false">
+
+  <div class="input-img-unit">
+    <img class="input-img" src="reg/social/assets/google_plus.png" />
+
+    <input class="input"
+      name="googlePlus" placeholder="Google+"
+      ng-model="regSocial.data.googlePlus" />
+  </div>
+
+  <div class="input-img-unit">
+    <img class="input-img" src="reg/social/assets/facebook.png" />
+
+    <input class="input"
+      name="facebook" placeholder="Facebook"
+      ng-model="regSocial.data.facebook" />
+  </div>
+
+  <div class="input-img-unit">
+    <img class="input-img" src="reg/social/assets/twitter.png" />
+
+    <input class="input"
+      name="twitter" placeholder="Twitter"
+      ng-model="regSocial.data.twitter" />
+  </div>
+
+  <div class="input-img-unit">
+    <img class="input-img" src="reg/social/assets/instagram.png" />
+
+    <input class="input"
+      name="instagram" placeholder="Instagram"
+      ng-model="regSocial.data.instagram" />
+  </div>
+
+  <div class="btn-unit">
+    <button type="submit" class="btn"
+      ng-click="regSocial.next()"
+    >Next</button>
+  </div>
+</form>

@@ -1,0 +1,62 @@
+<div class="form">
+  <table>
+    <tr>
+      <th class="section" colspan="2">Authentication data</td>
+    </tr>
+    <tr><th>Login</th><td>{{regSubmit.data.login}}</td></tr>
+    <tr><th>Email</th><td>{{regSubmit.data.email}}</td></tr>
+    <tr><th>Password</th><td>*******</td></tr>
+
+    <tr>
+      <th class="section" colspan="2">Personal data</th>
+    </tr>
+    <tr><th>First name</th><td>{{regSubmit.data.firstName}}</td></tr>
+    <tr><th>Last name</th><td>{{regSubmit.data.lastName}}</td></tr>
+    <tr><th>Birthday</th><td>{{regSubmit.data.birthday}}</td></tr>
+    <tr><th>Gender</th><td>{{regSubmit.data.gender}}</td></tr>
+    <tr ng-if="regSubmit.data.addInfo">
+      <th>Additional information</th><td>{{regSubmit.data.addInfo}}</td>
+    </tr>
+
+    <tr>
+      <th class="section" colspan="2">Contact information</th>
+    </tr>
+    <tr><th>Phone</th><td>{{regSubmit.data.phone}}</td></tr>
+    <tr><th>Country</th><td>{{regSubmit.data.country}}</td></tr>
+    <tr><th>City</th><td>{{regSubmit.data.city}}</td></tr>
+    <tr><th>Address</th><td>{{regSubmit.data.address}}</td></tr>
+    <tr ng-if="regSubmit.data.address2">
+      <th>Additional address</th><td>{{regSubmit.data.address2}}</td>
+    </tr>
+
+    <tr ng-if="regSubmit.data.googlePlus||regSubmit.data.facebook||
+        regSubmit.data.twitter||regSubmit.data.instagram">
+      <th class="section" colspan="2">Social nets</th>
+    </tr>
+    <tr  ng-if="regSubmit.data.googlePlus">
+      <th>Google+</th><td>{{regSubmit.data.googlePlus}}</td>
+    </tr>
+    <tr ng-if="regSubmit.data.facebook">
+      <th>Facebook</th><td>{{regSubmit.data.facebook}}</td>
+    </tr>
+    <tr ng-if="regSubmit.data.twitter">
+      <th>Twitter</th><td>{{regSubmit.data.twitter}}</td>
+    </tr>
+    <tr ng-if="regSubmit.data.instagram">
+      <th>Instagram</th><td>{{regSubmit.data.instagram}}</td>
+    </tr>
+  </table>
+
+  <div class="input-unit">
+    <label class="checkbox-label">
+      <input type="checkbox"
+        ng-model="regSubmit.data.confirmation" />Confirmation</label>
+  </div>
+
+  <div class="btn-unit">
+    <button type="button" class="btn"
+      ng-disabled="!regSubmit.data.confirmation"
+      ng-click="regSubmit.submit()"
+    >Submit</button>
+  </div>
+</div>

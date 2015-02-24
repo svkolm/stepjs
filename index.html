@@ -1,0 +1,78 @@
+<!doctype html>
+<html ng-app="app">
+<head>
+  <title>User registration</title>
+  <meta charset="utf-8" />
+  <meta name="description" content="Demo of StepJS" />
+  <link href="assets/favicon.ico" rel='shortcut icon' type='image/x-icon' />
+
+  <!-- Angular -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular-route.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular-animate.min.js"></script>
+
+  <!-- Step -->
+  <link href="components/step/nav/nav-ref-directive/nav-ref-inline.css" rel="stylesheet" />
+  <link href="components/step/nav/nav-cursor-directive/nav-cursor-inline.css" rel="stylesheet" />
+
+  <script src="components/step/step.js"></script>
+  <script src="components/step/step-provider.js"></script>
+  <script src="components/step/step-form-directive.js"></script>
+  <script src="components/step/nav/nav.js"></script>
+  <script src="components/step/nav/nav-directive.js"></script>
+  <script src="components/step/nav/nav-ref-directive/nav-ref-directive.js"></script>
+  <script src="components/step/nav/nav-cursor-directive/nav-cursor-directive.js"></script>
+  <script src="components/step/storage/storage.js"></script>
+  <script src="components/step/storage/storage-provider.js"></script>
+
+  <!-- Auxiliaries -->
+  <script src="components/aux/aux-auto-scroll-directive.js"></script>
+  <script src="components/aux/aux-auto-input-directive.js"></script>
+  <script src="components/aux/aux-pwd-confirm-directive.js"></script>
+
+  <!-- Stub service -->
+  <script src="components/stub-service.js"></script>
+
+  <!-- App -->
+  <link href="app.css" rel="stylesheet" />
+  <link href="animate.css" rel="stylesheet" />
+
+  <script src="app.js"></script>
+  <script src="reg/auth/auth.js"></script>
+  <script src="reg/auth/auth-controller.js"></script>
+  <script src="reg/personal/personal.js"></script>
+  <script src="reg/personal/personal-controller.js"></script>
+  <script src="reg/contact/contact.js"></script>
+  <script src="reg/contact/contact-controller.js"></script>
+  <script src="reg/social/social.js"></script>
+  <script src="reg/social/social-controller.js"></script>
+  <script src="reg/submit/submit.js"></script>
+  <script src="reg/submit/submit-controller.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="title">
+      <img class="title-img" src="assets/logo.png" />
+      <span class="title-txt">User registration</span>
+    </div>
+
+    <step-nav layout="inline">
+       <step-nav-ref>Authentication data</step-nav-ref
+      ><step-nav-ref>Personal data</step-nav-ref
+      ><step-nav-ref>Contact information</step-nav-ref
+      ><step-nav-ref>Social nets</step-nav-ref
+      ><step-nav-ref>Data submitting</step-nav-ref>
+
+      <step-nav-cursor></step-nav-cursor>
+    </step-nav>
+  </header>
+
+  <main ng-view aux-auto-scroll></main>
+
+  <footer>
+    Author of background picture:
+    http://greekturkish.fr.yuku.com/topic/8047/City-Drawing-george
+  </footer>
+</body>
+</html>

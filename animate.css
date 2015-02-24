@@ -1,0 +1,66 @@
+main.ng-enter,
+main.ng-leave {
+  -webkit-transition: all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s;
+  transition: all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s;
+}
+
+main.ng-enter {
+  left:100%;
+}
+main.ng-enter.ng-enter-active {
+  left:30%;
+}
+main.ng-leave {
+  left:30%;
+  opacity: 1;
+}
+main.ng-leave.ng-leave-active {
+  left:30%;
+  opacity: 0;
+}
+
+/* Inputs */
+
+.input {
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+/* Messages */
+
+.input-error-msg.ng-enter,
+.input-warning-msg.ng-enter,
+.form-error-msg.ng-enter,
+.input-error-msg.ng-leave,
+.input-warning-msg.ng-leave,
+.form-error-msg.ng-leave {
+  -webkit-transition: all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s;
+  transition: all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s;
+}
+.input-error-msg.ng-enter,
+.input-warning-msg.ng-enter,
+.form-error-msg.ng-enter {
+  opacity: 0;
+}
+.input-error-msg.ng-enter-active,
+.input-warning-msg.ng-enter-active,
+.form-error-msg.ng-enter.ng-enter-active {
+  opacity: 1;
+}
+.input-error-msg.ng-leave,
+.input-warning-msg.ng-leave,
+.form-error-msg.ng-leave {
+  opacity: 1;
+}
+.input-error-msg.ng-leave-active,
+.input-warning-msg.ng-leave-active,
+.form-error-msg.ng-leave.ng-leave-active {
+  opacity: 0;
+}
+
+/* Steps */
+
+.step-nav-cursor.move {
+  -webkit-transition: all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s;
+  transition: all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s;
+}

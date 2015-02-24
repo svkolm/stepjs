@@ -1,0 +1,25 @@
+.step-nav-inline > .step-nav-ref {
+  display: inline-block;
+  position: relative;
+  box-sizing: border-box;
+  height: 100%;
+  text-align: center;
+  vertical-align: middle;
+  padding: 10px;
+}
+.step-nav-inline > .step-nav-ref:before {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 20px;
+  left: 0;
+  top: 50%;
+  margin-top: -10px;
+  background-color: #e3e3e3;
+}
+.step-nav-inline > .step-nav-ref:first-child:before {
+  background-color: transparent;
+}
+.step-nav-inline > .step-nav-ref > .current {
+  font-weight: bold;
+}

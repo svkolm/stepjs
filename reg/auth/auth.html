@@ -1,0 +1,83 @@
+<form name="regAuthForm" novalidate step-form>
+
+  <div class="form-error-msg"
+    ng-if="regAuthForm.$submitted && regAuthForm.$invalid"
+  >Correct errors to go to the next step</div>
+
+  <div class="input-unit">
+    <label>Login</label>
+
+    <input class="input"
+      name="login" placeholder="Enter login"
+      ng-model="regAuth.data.login"
+      required />
+
+    <div class="input-error-msg"
+      ng-if="regAuthForm.$submitted &&
+        regAuthForm.login.$error.required"
+    >Login is required</div>
+  </div>
+
+  <div class="input-unit">
+    <label>Email</label>
+
+    <input type="email" class="input"
+      name="email" placeholder="Enter email"
+      ng-model="regAuth.data.email"
+      required />
+
+    <div class="input-error-msg"
+      ng-if="regAuthForm.$submitted &&
+        regAuthForm.email.$error.required"
+    >Email is required</div>
+
+    <div class="input-error-msg"
+      ng-if="regAuthForm.$submitted
+        && regAuthForm.email.$error.email"
+    >The email isn't correct</div>
+  </div>
+
+  <div class="input-unit">
+    <label>Password</label>
+
+    <input type="password" class="input"
+      name="password" placeholder="Enter password"
+      ng-model="regAuth.data.password"
+      required />
+
+    <div class="input-error-msg"
+      ng-if="regAuthForm.$submitted &&
+        regAuthForm.password.$error.required"
+    >Password is required</div>
+  </div>
+
+  <div class="input-unit">
+    <label>Password confirmation</label>
+
+    <input type="password" class="input"
+      name="pwdConfirm" placeholder="Confirm password"
+      ng-model="regAuth.pwdConfirm"
+      ng-disabled="regAuth.data.password === undefined"
+      aux-pwd-confirm="regAuth.data.password"
+      required />
+
+    <div class="input-error-msg"
+      ng-if="regAuthForm.$submitted &&
+        regAuthForm.password.$valid &&
+        regAuthForm.pwdConfirm.$error.required"
+    >Confirmation of password is required</div>
+
+    <div class="input-error-msg"
+      ng-if="regAuthForm.$submitted &&
+        regAuthForm.password.$valid &&
+        !regAuthForm.pwdConfirm.$error.required &&
+        regAuthForm.pwdConfirm.$error.auxPwdConfirm"
+    >Passwords don't match</div>
+  </div>
+
+  <div class="btn-unit">
+    <button type="submit" class="btn"
+      ng-click="regAuth.next()"
+    >Next</button>
+  </div>
+</form>

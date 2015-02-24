@@ -1,0 +1,15 @@
+.step-nav-stack > .step-nav-cursor {
+  position: absolute;
+  right: 10px;
+}
+.step-nav-stack > .step-nav-cursor:before {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  bottom: 0;
+  top: -9px;
+  border-top: 9px solid transparent;
+  border-bottom: 9px solid transparent;
+  border-right: 10px solid;
+}

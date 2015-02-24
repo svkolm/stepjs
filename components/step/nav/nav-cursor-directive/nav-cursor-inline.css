@@ -1,0 +1,14 @@
+.step-nav-inline > .step-nav-cursor {
+  position: relative;
+}
+.step-nav-inline > .step-nav-cursor:before {
+  position: absolute;
+  width: 0;
+  height: 0;
+  content: "";
+  bottom: 0;
+  left: -9px;
+  border-left: 9px solid transparent;
+  border-right: 9px solid transparent;
+  border-bottom: 10px solid;
+}

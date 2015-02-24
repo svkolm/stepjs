@@ -1,0 +1,27 @@
+.step-nav-stack {
+  display: inline-block;
+  position: relative;
+}
+
+.step-nav-stack > .step-nav-ref {
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+  text-align: center;
+  padding: 10px;
+}
+.step-nav-stack > .step-nav-ref:before {
+  position: absolute;
+  content: "";
+  width: 90%;
+  height: 1px;
+  left: 5%;
+  top: 0;
+  background-color: #e3e3e3;
+}
+.step-nav-stack > .step-nav-ref:first-child:before {
+  background-color: transparent;
+}
+.step-nav-stack > .step-nav-ref > .current {
+  font-weight: bold;
+}
